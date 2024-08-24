@@ -1,0 +1,97 @@
+<!--
+  Rui Santos
+  Complete project details at https://RandomNerdTutorials.com/esp32-web-bluetooth/
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files.
+  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Near Field Control App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="logo2.png" alt="logo">
+    <p>Near Field Control</p>
+  </header>
+
+  <section class="body-container dflex jcol jcenter center ">
+  
+  <section class="connection-header">
+    <p class="heading">Connection State</p>
+    <button id="connectButton" class="btn">Connect</button>
+    <p><span id="bleState" style="color:#d13a30;">Device Disconnected</span></p>
+  </section>
+
+  <section class="settings sb">
+  <section class="switch-container">
+    <p class="heading">Switch</p>
+    <hr>
+    <section class="sensitivity-container dflex jcol sb">
+      <label for="sensitivity" class="mb-15">Sensing Range</label>
+      <input id="sensitivity" type="range" min="0" max="2" value="0" class="slider mb-15">
+      <section class="senselabel dflex sb mb-5">
+        <p>SHORT</p>
+        <p>MEDIUM</p>
+        <p>LONG</p>
+      </section>
+    </section>
+    <section class="ontime-container dflex jcol sb">
+      <label for="timeon" class="mb-10">Turn off after</label>
+      <select id="timeon" class="timeon">
+        <option value="5">5 seconds</option>
+        <option value="10">10 seconds</option>
+        <option value="20">20 seconds</option>
+        <option value="30">30 seconds</option>
+        <option value="60">60 seconds</option>
+        <option value="120">2 minutes</option>
+        <option value="300">5 minutes</option>
+        <option value="600">10 minutes</option>
+        <option value="900">15 minutes</option>
+        <option value="1800">30 minutes</option>
+        <option value="3600">1 hour</option>
+        <option value="0" selected>Never</option>
+      </select>
+    </section>
+  </section>
+  <section class="key-container">
+    <p class="heading">Add a New Key</p>
+    <hr>
+    <label for="keypass" class="mb-10">Enter Key ID</label>
+    <section class="dflex sb keypasscon">
+    <input type="text" class="keypass" id="keypass">
+    <button class="btn" id="addkeybtn">Add Key</button>
+  </section>
+  <p class="warning">KEY IS CASE SENSITIVE</p>
+  
+  <!-- <label for="keyname" class="mt-10 mb-5">Assign a Name</label>
+  <section class="dflex sb center keypasscon">
+  <input type="text" id="keyname" placeholder="Whose key is these?" class="pd-10 keyname">
+  <button class="btn"><img width="25px" src="check.png" alt=""></button>
+  </section> -->
+</section>
+</section>
+
+<button class="resetbtn btn mb-10" id="resetBtn">RESET DEVICE</button>
+</section>
+
+<footer class="dflex jcol sb jcenter center">
+  <p class="closing">NEWNESS ELECTRONICS</p>
+  <p class="closing"><span>&copy;</span> 2024</p>
+  <section class="footer-images dflex sb center mt-10 mb-10">
+    <a href="https://www.youtube.com/@newnesselectronics4184"><img src="footers/youtube.png" alt="youtube"></a>
+    <a href="https://www.facebook.com/newnesselectronic"><img src="footers/facebook.png" alt="facebook"></a>
+    <a href="https://www.instagram.com/newnesselectronic"><img src="footers/instagram.png" alt=""></a>
+    <a href="https://wa.me/2347062064238"><img src="footers/whatsapp.png" alt=""></a>
+    <a href="mailto:newnesselectronics@gmail.com"><img src="footers/gmail.png" alt=""></a>
+  </section>
+  <p class="closing">icons by <a href="https://icons8.com/">icons8</a></p>
+</footer>
+</body>
+</html>
